@@ -24,14 +24,12 @@ final class ServiceTableViewCell: UITableViewCell {
     private lazy var serviceImage: UIImageViewURL = {
         let image = UIImageViewURL()
         image.contentMode = .scaleToFill
-        image.translatesAutoresizingMaskIntoConstraints = false
         return image
     }()
     
     private lazy var serviceTitle: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18, weight: .bold)
-        label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
 
