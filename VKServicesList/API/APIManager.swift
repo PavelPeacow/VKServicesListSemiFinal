@@ -7,10 +7,21 @@
 
 import Foundation
 
-enum APIError: Error {
+enum APIError: LocalizedError {
     case badURL
     case canNotGet
     case canNotDecode
+    
+    var errorDescription: String? {
+        switch self {
+        case .badURL:
+            return "Неправильный URL адресс!"
+        case .canNotGet:
+            return "Не удалось получить данные!"
+        case .canNotDecode:
+            return "Не удалось декодировать полученные данные!"
+        }
+    }
 }
 
 enum APIUrls {

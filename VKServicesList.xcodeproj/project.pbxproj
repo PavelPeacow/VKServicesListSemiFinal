@@ -16,6 +16,7 @@
 		B571086929A0AFAD003698C8 /* ServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571086829A0AFAD003698C8 /* ServiceItem.swift */; };
 		B571086C29A0B0E5003698C8 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571086B29A0B0E5003698C8 /* ServiceTableViewCell.swift */; };
 		B571087029A0B299003698C8 /* UIImageViewURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571086F29A0B299003698C8 /* UIImageViewURL.swift */; };
+		B571087329A0B84F003698C8 /* VKServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571087229A0B84F003698C8 /* VKServiceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B571086829A0AFAD003698C8 /* ServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceItem.swift; sourceTree = "<group>"; };
 		B571086B29A0B0E5003698C8 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		B571086F29A0B299003698C8 /* UIImageViewURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewURL.swift; sourceTree = "<group>"; };
+		B571087229A0B84F003698C8 /* VKServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServiceDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				B571085329A0AC5C003698C8 /* VKServicesViewController.swift */,
+				B571087229A0B84F003698C8 /* VKServiceDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 			files = (
 				B571087029A0B299003698C8 /* UIImageViewURL.swift in Sources */,
 				B571086629A0ADBD003698C8 /* APIManager.swift in Sources */,
+				B571087329A0B84F003698C8 /* VKServiceDetailViewController.swift in Sources */,
 				B571086C29A0B0E5003698C8 /* ServiceTableViewCell.swift in Sources */,
 				B571085429A0AC5C003698C8 /* VKServicesViewController.swift in Sources */,
 				B571086929A0AFAD003698C8 /* ServiceItem.swift in Sources */,

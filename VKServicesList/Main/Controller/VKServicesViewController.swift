@@ -60,7 +60,26 @@ extension VKServicesViewController {
             print(serviceItems)
         } catch {
             print(error)
+            createAlert(with: error.localizedDescription)
+            createBackgroundErrorView(with: error.localizedDescription)
         }
+    }
+    
+    func createAlert(with title: String) {
+        let ac = UIAlertController(title: title, message: "Попробуйте ещё раз!", preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK!", style: .default))
+        present(ac, animated: true)
+    }
+    
+    func createBackgroundErrorView(with text: String) {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textColor = .systemGray
+        label.textAlignment = .center
+        label.text = text
+        
+        tableView.backgroundView = label
+        tableView.isScrollEnabled = false
     }
     
 }
@@ -95,6 +114,13 @@ extension VKServicesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let serviceItem = serviceItems[indexPath.row]
+        
+        let vc = VKServiceDetailViewController()
+        vc.configure(serviceItem: serviceItem)
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

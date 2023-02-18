@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ServiceTableViewCell: UITableViewCell {
+final class ServiceTableViewCell: UITableViewCell {
     
     static let identifier = "ServiceTableViewCell"
     
@@ -49,7 +49,6 @@ class ServiceTableViewCell: UITableViewCell {
     func configure(with title: String, imageURL: String) {
         guard let url = URL(string: imageURL) else { return }
         serviceTitle.text = title
-        print(imageURL)
         serviceImage.loadImage(by: url)
     }
     
