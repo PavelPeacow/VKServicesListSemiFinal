@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol APIUrlsProtocol {
+    var url: URL? { get }
+}
+
 enum APIError: LocalizedError {
     case badURL
     case canNotGet
@@ -24,7 +28,7 @@ enum APIError: LocalizedError {
     }
 }
 
-enum APIUrls {
+enum APIUrls: APIUrlsProtocol {
     case serviceList
     
     var url: URL? {
@@ -45,7 +49,7 @@ final class APIManager {
         self.jsonDecoder = jsonDecoder
     }
     
-    func getContent<T: Decodable>(by url: APIUrls, type: T.Type) async throws -> T {
+    func getContent<T: Decodable>(by url: APIUrlsProtocol, type: T.Type) async throws -> T {
         guard let url = url.url else { throw APIError.badURL }
         
         let request = URLRequest(url: url)

@@ -17,7 +17,18 @@
 		B571086C29A0B0E5003698C8 /* ServiceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571086B29A0B0E5003698C8 /* ServiceTableViewCell.swift */; };
 		B571087029A0B299003698C8 /* UIImageViewURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571086F29A0B299003698C8 /* UIImageViewURL.swift */; };
 		B571087329A0B84F003698C8 /* VKServiceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571087229A0B84F003698C8 /* VKServiceDetailViewController.swift */; };
+		B571087B29A0C365003698C8 /* VKServicesListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B571087A29A0C365003698C8 /* VKServicesListTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B571087C29A0C365003698C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B571084429A0AC5C003698C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B571084B29A0AC5C003698C8;
+			remoteInfo = VKServicesList;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B571084C29A0AC5C003698C8 /* VKServicesList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKServicesList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +43,19 @@
 		B571086B29A0B0E5003698C8 /* ServiceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceTableViewCell.swift; sourceTree = "<group>"; };
 		B571086F29A0B299003698C8 /* UIImageViewURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewURL.swift; sourceTree = "<group>"; };
 		B571087229A0B84F003698C8 /* VKServiceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServiceDetailViewController.swift; sourceTree = "<group>"; };
+		B571087829A0C365003698C8 /* VKServicesListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VKServicesListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B571087A29A0C365003698C8 /* VKServicesListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServicesListTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B571084929A0AC5C003698C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B571087529A0C365003698C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				B571084E29A0AC5C003698C8 /* VKServicesList */,
+				B571087929A0C365003698C8 /* VKServicesListTests */,
 				B571084D29A0AC5C003698C8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B571084C29A0AC5C003698C8 /* VKServicesList.app */,
+				B571087829A0C365003698C8 /* VKServicesListTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +157,14 @@
 			path = Subclass;
 			sourceTree = "<group>";
 		};
+		B571087929A0C365003698C8 /* VKServicesListTests */ = {
+			isa = PBXGroup;
+			children = (
+				B571087A29A0C365003698C8 /* VKServicesListTests.swift */,
+			);
+			path = VKServicesListTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +185,24 @@
 			productReference = B571084C29A0AC5C003698C8 /* VKServicesList.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B571087729A0C365003698C8 /* VKServicesListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B571087E29A0C365003698C8 /* Build configuration list for PBXNativeTarget "VKServicesListTests" */;
+			buildPhases = (
+				B571087429A0C365003698C8 /* Sources */,
+				B571087529A0C365003698C8 /* Frameworks */,
+				B571087629A0C365003698C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B571087D29A0C365003698C8 /* PBXTargetDependency */,
+			);
+			name = VKServicesListTests;
+			productName = VKServicesListTests;
+			productReference = B571087829A0C365003698C8 /* VKServicesListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -167,6 +215,10 @@
 				TargetAttributes = {
 					B571084B29A0AC5C003698C8 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					B571087729A0C365003698C8 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = B571084B29A0AC5C003698C8;
 					};
 				};
 			};
@@ -184,6 +236,7 @@
 			projectRoot = "";
 			targets = (
 				B571084B29A0AC5C003698C8 /* VKServicesList */,
+				B571087729A0C365003698C8 /* VKServicesListTests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +248,13 @@
 			files = (
 				B571085C29A0AC5D003698C8 /* LaunchScreen.storyboard in Resources */,
 				B571085929A0AC5D003698C8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B571087629A0C365003698C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +276,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B571087429A0C365003698C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B571087B29A0C365003698C8 /* VKServicesListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B571087D29A0C365003698C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B571084B29A0AC5C003698C8 /* VKServicesList */;
+			targetProxy = B571087C29A0C365003698C8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B571085A29A0AC5D003698C8 /* LaunchScreen.storyboard */ = {
@@ -406,6 +482,42 @@
 			};
 			name = Release;
 		};
+		B571087F29A0C365003698C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V352R4M2J4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pavel.VKServicesListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VKServicesList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VKServicesList";
+			};
+			name = Debug;
+		};
+		B571088029A0C365003698C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V352R4M2J4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pavel.VKServicesListTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VKServicesList.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/VKServicesList";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +535,15 @@
 			buildConfigurations = (
 				B571086129A0AC5D003698C8 /* Debug */,
 				B571086229A0AC5D003698C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B571087E29A0C365003698C8 /* Build configuration list for PBXNativeTarget "VKServicesListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B571087F29A0C365003698C8 /* Debug */,
+				B571088029A0C365003698C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

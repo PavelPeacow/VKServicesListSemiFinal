@@ -55,9 +55,8 @@ extension VKServicesViewController {
     
     @objc func getVKServiceItems() async {
         do {
-            let result = try await APIManager().getContent(by: .serviceList, type: ServiceResponse.self)
+            let result = try await APIManager().getContent(by: APIUrls.serviceList, type: ServiceResponse.self)
             serviceItems = result.items
-            print(serviceItems)
         } catch {
             print(error)
             createAlert(with: error.localizedDescription)

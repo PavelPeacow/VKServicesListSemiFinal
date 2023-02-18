@@ -75,14 +75,16 @@ extension VKServiceDetailViewController {
     
     @objc func didTapServiceLink(_ sender: UITapGestureRecognizer) {
         guard let url = (sender.view as? UILabel)?.text else { return }
-        showWebView(by: url)
+        if let vc = createWebView(by: url) {
+            present(vc, animated: true)
+        }
     }
     
-    func showWebView(by link: String) {
-        guard let url = URL(string: link) else { return }
+    func createWebView(by link: String) -> SFSafariViewController? {
+        guard let url = URL(string: link) else { return nil }
 
         let vc = SFSafariViewController(url: url)
-        present(vc, animated: true)
+        return vc
     }
     
 }
